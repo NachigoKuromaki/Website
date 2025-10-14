@@ -195,7 +195,11 @@ html {
   .social-icon {
   display:inline-block;
   z-index: 2;
-  height:10px;
+  height:15px;
+  position:fixed;
+  margin-top:5px;
+  margin-left:5px;
+
  
 }
 
