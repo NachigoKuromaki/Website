@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta lang = "utf-8">
+        <title>Projects</title>
+        <link rel="stylesheet" href="pages.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="script.js"></script>
+    
+    </head>
+    <body>
+        <nav>
+        <div class="LargeLeftBar">
+            <a href = "../home.html" class = "TopButton">SC</a>
+
+            <div class = "social-icon">
+                <a href="https://www.linkedin.com/in/steven-chao-65a93b183/" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/images/icons/linkedIn.png">
+                </a>
+                <a href="https://www.instagram.com/nachigok_/" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/images/icons/instagram.png">
+                </a>
+            </div>
+
+            
+        </div>
+
+        <div class="LargeRightBar">
+            <div class = "DropMain TopButton" >Work
+                <ul class ="DropMenu">
+                        <li class = DropItems><a href ="animation.html">Animation</a></li>
+                        <li class = DropItems><a href ="illustration.html">Illustration</a></li>
+                        <li class = DropItems><a href ="development.html">Development</a></li>
+                </ul>
+            </div>
+            <a href = "playground.html" class = "TopButton">Playground</a>
+            <a href = "about.html" class="TopButton">About</a>
+            <a class="TopButton">Blog</a>
+        </div>
+        </nav>
+
+        <div class = "container">
+
+            <div class ="box">
+                <div class ="dream">
+                <img src = "../assets/images/Illustration/Illus_01.jpg">
+                <img src = "../assets/images/Illustration/Illus_02.png">
+                
+                </div>
+                <div class = "dream">
+                 <img src = "../assets/images/Illustration/Illus_04.jpg">
+                 <img src = "../assets/images/Illustration/Illus_05.png">
+                 <img src = "../assets/images/Illustration/Illus_03.png">
+                 
+                 
+                 
+                </div>
+                <div class ="dream">
+                <img src = "../assets/images/Illustration/Illus_07.png">
+                <img src = "../assets/images/Illustration/Illus_08.jpeg">
+                <img src = "../assets/images/Illustration/Illus_06.png">
+                
+
+                </div>
+
+                <div class ="dream">
+                <img src = "../assets/images/Illustration/Illus_11.jpg">
+                <img src = "../assets/images/Illustration/Illus_09.png">
+                <img src = "../assets/images/Illustration/Illus_10.png">    
+                
+                <div class = "popup-image"> 
+                <span>&times;</span>
+                <img src = "../assets/images/Illustration/Illus_02.png">
+
+                </div>
+
+                </div>
+                
+                
+             </div>
+
+            
+        </div>
+                
+
+            <script>
+            document.querySelectorAll('.dream img').forEach(image =>{
+                image.onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'block';
+                    document.querySelector('.popup-image img').src = image.getAttribute('src');
+                }
+            });
+
+            document.querySelector('.popup-image span').onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'none';
+            }
+        </script>
+
+        
+
+
+       
+    </body>
+
+
+</html>
+

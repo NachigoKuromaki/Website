@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta lang = "utf-8">
+        <title>Projects</title>
+        <link rel="stylesheet" href="pages.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    
+    </head>
+    <body>
+      <nav>
+        <div class="LargeLeftBar">
+            <a href = "../home.html" class = "TopButton">SC</a>
+
+            <div class = "social-icon">
+                <a href="https://www.linkedin.com/in/steven-chao-65a93b183/" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/images/icons/linkedIn.png">
+                </a>
+                <a href="https://www.instagram.com/nachigok_/" target="_blank" rel="noopener noreferrer">
+                    <img src="../assets/images/icons/instagram.png">
+                </a>
+            </div>
+        </div>
+
+        <div class="LargeRightBar">
+            <div class = "DropMain TopButton" >Work
+                <ul class ="DropMenu">
+                        <li class = DropItems><a href ="animation.html">Animation</a></li>
+                        <li class = DropItems><a href ="illustration.html">Illustration</a></li>
+                        <li class = DropItems><a href ="development.html">Development</a></li>
+                </ul>
+            </div>
+            <a href = "playground.html" class = "TopButton">Playground</a>
+            <a href = "about.html" class="TopButton">About</a>
+            <a class="TopButton">Blog</a>
+
+        <!--</div>
+        <div class="socialContainer">
+            <ul class="socials">
+                <li class><a href = "https://www.linkedin.com/in/steven-chao-65a93b183/" target = "_blank" rel="noopener noreferrer">linkedin</a></li>
+            </ul>
+        </div>
+    -->
+    </nav>
+    <div class="container">
+        <div class="box">
+            <div class ="dream">
+            <video autoplay muted loop src ="../assets/images/Playground/pg_22.mp4"></video>
+            <video autoplay muted loop src ="../assets/images/Playground/pg_17.mov"></video>
+            <img src = "../assets/images/Playground/pg_01.png">
+            <img src = "../assets/images/Playground/pg_03.jpg">
+
+            </div>
+
+            <div class ="dream">
+            <img src = "../assets/images/Playground/pg_05.jpg">
+            <img src = "../assets/images/Playground/pg_06.png">
+            <img src = "../assets/images/Playground/pg_07.png">
+            <img src = "../assets/images/Playground/pg_08.png">
+            <img src = "../assets/images/Playground/pg_04.jpg">
+            <video autoplay muted loop src ="../assets/images/Playground/pg_20.mp4"></video>
+            </div>
+
+            <div class ="dream">
+            <video autoplay muted loop src ="../assets/images/Playground/pg_19.mov"></video>
+            <img src = "../assets/images/Playground/pg_02.png">
+            <img src = "../assets/images/Playground/pg_13.png">
+            <video autoplay muted loop src ="../assets/images/Playground/pg_18.mov"></video>
+            <img src = "../assets/images/Playground/pg_14.png">
+            
+            </div>
+
+            <div class ="dream">
+            <video autoplay muted loop src="../assets/images/Playground/pg_16.mp4"></video>
+            <img src = "../assets/images/Playground/pg_09.png">
+            <img src = "../assets/images/Playground/pg_10.png">
+            <img src = "../assets/images/Playground/pg_12.png">
+            
+
+            <div class="popup-image">
+                <span>&times;</span>
+                <img src = "../assets/images/Playground/pg_01.png">
+
+            </div>
+            
+            </div>
+
+        
+              <div class="popup-video">
+                <span>&times;</span>
+                <video autoplay muted loop src ="../assets/images/Playground/pg_15.mp4"></video>
+                
+
+            </div>
+        </div>
+    </div>
+
+        <script>
+            document.querySelectorAll('.dream img').forEach(image =>{
+                image.onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'block';
+                    document.querySelector('.popup-image img').src = image.getAttribute('src');
+                }
+            });
+
+            document.querySelector('.popup-image span').onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'none';
+            }
+        </script>
+
+         <script>
+            document.querySelectorAll('.dream video').forEach(video =>{
+                video.onclick = () =>{
+                    document.querySelector('.popup-video').style.display = 'block';
+                    document.querySelector('.popup-video video').src = video.getAttribute('src');
+                }
+            });
+
+            document.querySelector('.popup-video span').onclick = () =>{
+                document.querySelector('.popup-video').style.display = 'none';
+            }
+        </script>
+
+
+
+    </body>
+
+
+</html>
+

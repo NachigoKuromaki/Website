@@ -1,0 +1,217 @@
+html {
+    background-color: rgb(38, 42, 48)
+}
+ .TopButton {
+        background-color: rgb(255, 172, 49);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 40px;
+        font-family: Roboto;
+
+        transition: background-color 0.25s;
+        transition: color 0.25s;
+        transition: font-size .2s;
+
+
+        margin-right: 3px;
+    
+
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom:  5px;
+
+        text-decoration: none;
+        display:inline-block;
+
+        border-radius: 5px;
+
+ }
+
+ .TopButton:hover{
+        background-color: white;
+        color: rgb(255, 172, 49);
+        font-size: 50px;
+
+
+ }
+    .TopButton:active{
+        opacity: 0.50;
+    }
+
+
+.LargeRightBar {
+    position: fixed;
+    right: 30px;
+    z-index: 2;
+    margin-top: 1%;
+
+}
+.LargeLeftBar {
+    position: fixed;
+    left: 30px;
+    z-index: 2;
+    margin-top: 1%;
+}
+
+
+.Title {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 35%;
+    font-family: Roboto;
+
+    text-align: center;
+
+    z-index: 1;
+}
+#NameTitle {
+    font-size: 100px;
+    font-weight: bold;
+    color: white; 
+    
+}
+
+#NameTitle:hover{
+    font-size: 120px;
+    transition: font-size 1s;
+
+}
+#IdentityUnder {
+    font-size: 30px;
+    color: lightslategray;
+    margin-top: -80px;
+    
+
+}
+.DropMain{
+    position:relative;
+    
+    
+    
+}
+
+.DropMenu{
+    position:absolute;
+    display:none;
+    top:90%;
+    left: 12;
+    right: 0;
+    padding: 10;
+    margin: 0;
+    
+
+}
+
+.DropItems {
+
+    position: relative;
+    display:block;
+
+    text-decoration: none;
+    list-style:none;
+
+    background-color: rgb(255, 172, 49);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Roboto;
+
+    transition: background-color 0.25s;
+    transition: color 0.25s;
+    transition: font-size .2s;
+
+
+    margin-right: 3px;
+
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom:  5px;
+
+
+}
+
+.DropItems a {
+
+    text-decoration:none;
+    list-style:none;
+    color: white
+}
+.Animation{
+    opacity: 0.09;
+    width: 100%;
+    height: 100%
+    
+}
+
+
+.DropItems:hover {
+    background-color: #555;
+    color: white;
+   
+
+}
+
+.DropMain:hover .DropMenu{
+    display:block;
+}
+
+.homePageDrawing{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width:100%;
+    height:100%;
+    transform: scale(1.4);
+    
+    object-fit:contain;
+    z-index:0;
+    
+    
+}
+
+.homePageDrawing02{
+    position: fixed;
+    top: 0%;
+    right: 52%;
+    width:100%;
+    height:100%;
+    transform: scale(1.4) scaleX(-1) rotate(-5deg);
+    
+    object-fit:contain;
+    z-index:0;
+    overflow: hidden;
+    
+    
+}
+
+  .social-icon {
+  display:inline-block;
+  z-index: 2;
+  height:10px;
+ 
+}
+
+.social-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+  border-radius: 30px;
+}
+
+.social-icon img:hover {
+  transform: scale(1.3);
+  background-color: white;
+  color: rgb(255, 172, 49);
+  cursor: pointer;
+}

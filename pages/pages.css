@@ -1,0 +1,453 @@
+html {
+    background-color: rgb(38, 42, 48)
+}
+* {
+    box-sizing:border-box;
+}
+
+/* ---------------------------------------
+    Taskbar UpTop
+-----------------------------------------*/
+ .TopButton {
+        background-color: rgb(255, 172, 49);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 40px;
+        font-family: Roboto;
+
+        transition: background-color 0.25s;
+        transition: color 0.25s;
+        transition: font-size .2s;
+
+
+        margin-right: 3px;
+    
+
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom:  5px;
+
+        text-decoration: none;
+        display:inline-block;
+
+        border-radius: 5px;
+
+ }
+
+ .TopButton:hover{
+        background-color: white;
+        color: rgb(255, 172, 49);
+        font-size: 50px;
+
+
+ }
+    .TopButton:active{
+        opacity: 0.50;
+    }
+
+
+.LargeRightBar {
+    position: fixed;
+    right: 30px;
+    z-index: 2;
+    top: 30px;
+
+    
+
+
+}
+.LargeLeftBar {
+    position: fixed;
+    left: 30px;
+    z-index: 2;
+    top: 30px;
+}
+
+
+.Title {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 10%;
+    font-family: Roboto;
+
+    text-align: center;
+
+    z-index: 1;
+}
+
+
+.DropMain{
+    position:relative;
+    
+    
+    
+}
+
+.DropMenu{
+    position:absolute;
+    display:none;
+    top:90%;
+    left: 12;
+    right: 0;
+    padding: 10;
+    margin: 0;
+    
+
+}
+
+.DropItems {
+
+    position: relative;
+    display:block;
+
+    text-decoration: none;
+    list-style:none;
+
+    background-color: rgb(255, 172, 49);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: Roboto;
+
+    transition: background-color 0.25s;
+    transition: color 0.25s;
+    transition: font-size .2s;
+
+
+    margin-right: 3px;
+
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom:  5px;
+
+
+}
+
+.DropItems a {
+
+    text-decoration:none;
+    list-style:none;
+    color: white
+}
+
+
+.DropItems:hover {
+    background-color: #555;
+    color: white;
+   
+
+}
+
+.DropMain:hover .DropMenu{
+    display:block;
+}
+
+/* ---------------------------------------
+    Stuff
+-----------------------------------------*/
+
+.Label{
+        background-color: rgb(255, 172, 49);
+        color: white;
+        border: none;
+        font-weight: bold;
+        font-size: 40px;
+        font-family: Roboto;
+
+
+        margin-left: 3px;
+    
+
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom:  5px;
+
+        text-decoration: none;
+        display:inline-block;
+        
+        position: relative;
+      
+        
+        left: 50%;
+        transform: translatex(-50%);
+
+ }
+ .yep{
+    position: absolute;
+    margin-top:150px;
+    padding-bottom:10px;
+    left: 50%;
+    transform: translatex(-50%);
+ }
+ /* ---------------------------------------
+    Images + Popup (lightbox)
+-----------------------------------------*/
+ .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    
+
+
+ }
+
+ .container .box{
+    display: grid;
+    margin-top:100px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    
+ }
+
+ .container .box .dream{
+    width: 100%;
+    
+    
+    
+ }
+
+  .container .box .dream img{
+    margin-bottom: 15px;
+    width: 100%;
+    display:block;
+    height:auto;
+    
+ }
+
+ .container .box .dream video{
+    margin-bottom: 15px;
+    width: 100%;
+    display:block;
+    height:auto;
+ }
+
+
+ .container .popup-image{
+    position: fixed;
+    top:0; left:0;
+    background:rgba(0,0,0,.9);
+    height:100vh;
+    width:100vw;
+    z-index: 100;
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+ }
+ .container .popup-image span{
+    position:absolute;
+    top:0; right:30px;
+    font-size: 60px;
+    font-weight: bolder;
+    color:white;
+    cursor:pointer;
+    z-index: 100;
+ }
+ .container .popup-image img{
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit:contain;
+    display:none;
+    padding-top:20px;
+    padding-bottom:20px;
+    
+ }
+ @media (max-width:768px){
+    .container .popup-image img{
+        width:95%;
+    }
+ }
+
+
+   .container .popup-video{
+    position: fixed;
+    top:0; left:0;
+    background:rgba(0,0,0,.9);
+    height:100vh;
+    width:100vw;
+    z-index: 100;
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+ }
+
+  .container .popup-video span{
+    position:absolute;
+    top:0; right:30px;
+    font-size: 60px;
+    font-weight: bolder;
+    color:white;
+    cursor:pointer;
+    z-index: 100;
+ }
+
+  @media (max-width:768px){
+    .container .popup-video video{
+        width:95%;
+    }
+ }
+
+   .container .popup-video video{
+    max-width: 100vw;
+    max-height: 100vh;
+    object-fit:contain;
+  }
+
+
+   .mainContent{
+     margin-top: 200px;
+     padding: 40px;
+
+ }
+
+  .heading {
+    color:white;
+    font-size: 30px;
+    font-family: Roboto;
+    
+
+ }
+  /* ---------------------------------------
+    Text + Body
+-----------------------------------------*/
+
+ .dev{
+    background-color: rgb(255, 172, 49);
+        color: white;
+        border: none;
+        font-weight: bold;
+        font-size: 40px;
+        font-family: Roboto;
+
+        transition: background-color 0.25s;
+        transition: color 0.25s;
+        transition: font-size .2s;
+
+        text-decoration: none;
+
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom:  5px;
+
+    
+ }
+
+ .dev:hover{
+        background-color: white;
+        color: rgb(255, 172, 49);
+        
+
+ }
+  .paragraph{
+    
+    color:white;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+
+    line-height: 1.3;
+    
+
+  }
+
+  .containerAbout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;       /* fills full screen height */
+  text-align: center;       /* centers "About Me" text */
+  padding: 40px;            /* prevents it from hugging edges */
+}
+
+  .aboutMe{
+    background-color: rgb(255, 172, 49);
+        color: white;
+        border: none;
+        font-weight: bolder;
+        font-size: 60px;
+        font-family: Roboto;
+
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom:  5px;
+
+        border-radius: 5px;
+
+        text-align: center;
+        display: inline-block;
+
+  }
+
+  .profile{
+    display:flex;
+    align-items:flex-start;
+    flex-direction: row;
+    object-fit:cover;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .profile img {
+    width: 700px;
+    height: 700px;
+    border-radius: 10%;
+    margin-right: 20px;
+
+  }
+  
+  .profile-info {
+    margin-bottom:10px;
+    display: block;
+  }
+
+  .bold {
+    font-weight:bold;
+    color:  rgb(255, 172, 49);
+  }
+
+  .social-icon {
+  display:inline-block;
+  z-index: 2;
+  height:10px;
+ 
+}
+
+.social-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+  border-radius: 30px;
+}
+
+.social-icon img:hover {
+  transform: scale(1.3);
+  background-color: white;
+  color: rgb(255, 172, 49);
+  cursor: pointer;
+}
+
+
+
+
