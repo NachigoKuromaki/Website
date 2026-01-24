@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(38, 42, 48)
+    background-color: rgb(255, 255, 255)
 }
 * {
     box-sizing:border-box;
@@ -69,7 +69,7 @@ html {
 
 .Title {
     position: absolute;
-    left: 50%;
+    left: 30%;
     transform: translatex(-50%);
     top: 10%;
     font-family: Roboto;
@@ -315,7 +315,7 @@ html {
  }
 
   .heading {
-    color:white;
+    color:rgb(0, 0, 0);
     font-size: 30px;
     font-family: Roboto;
     
@@ -355,7 +355,7 @@ html {
  }
   .paragraph{
     
-    color:white;
+    color:rgb(0, 0, 0);
     font-family: Roboto;
     font-size: 20px;
     font-weight: bold;
@@ -421,7 +421,7 @@ html {
 
   .bold {
     font-weight:bold;
-    color:  rgb(255, 172, 49);
+    color:  rgb(223, 140, 16);
   }
 
   .social-icon {
